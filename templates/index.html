@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename = '/css/index.css') }}" />
+    <title>Proyecto contador</title>
+</head>
+<body>
+    <h1>Contador de visitas</h1>
+    <div>
+            <h3>{{session['visitas']}}</h3>
+            <a href="/sumar">Suma 2</a>
+            <a href="/clear">Reiniciar</a>
+            
+        
+    </div>
+</body>
+</html>
