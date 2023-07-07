@@ -4,12 +4,14 @@ app = Flask(__name__)
 app.secret_key = 'MyScretKey'
 
 @app.route("/")
-def root():
+def visitas():
     if ("visitas" in session):
         session["visitas"] += 1
     else:
         session["visitas"] = 0
-    return render_template('index.html')
+        return redirect("/")
+    return render_template('index.html', visita = visitas)
+
 
 
 @app.route("/clear")
